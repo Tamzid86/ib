@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Idea's Bangladesh</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #a9ebc4, #bef5ce 90%);
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #1e4033;
+      overflow: hidden;
+    }
+
+    .container {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      animation: slideDown 1.5s ease forwards;
+    }
+
+    .title img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      animation: logoSpin 2s ease;
+    }
+
+    .title h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0;
+      animation: fadeUp 2s ease 1s forwards;
+    }
+
+    .coming-soon {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #0e2f23;
+      opacity: 0;
+      border-right: 3px solid rgba(0, 0, 0, 0.75);
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) 2s forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; opacity: 1; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: rgba(0, 0, 0, 0.75); }
+    }
+
+    @keyframes logoSpin {
+      from { transform: rotate(-20deg) scale(0.8); opacity: 0; }
+      to { transform: rotate(0deg) scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .title h1 { font-size: 2rem; }
+      .title img { width: 45px; height: 45px; }
+      .coming-soon { font-size: 1.5rem; }
+      p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Title with Logo -->
+    <div class="title">
+      <img src="logo.jpeg" alt="Logo" />
+      <h1>Idea's Bangladesh</h1>
+    </div>
+    <p>A platform where ideas turn into impactful stories and innovation thrives for a better tomorrow.</p>
+    <div class="coming-soon">Something great is coming soon...</div>
+  </div>
+</body>
+</html>
